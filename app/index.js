@@ -6,8 +6,17 @@ var yeoman = require('yeoman-generator');
 
 var BasicAppGenerator = module.exports = function BasicAppGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
-  this.cowsay = this.readFileAsString(path.join(__dirname, '../COWSAY'));
+  var cowsay = this.readFileAsString(path.join(__dirname, '../COWSAY'));
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+    this.on('end', function() {
+        this.installDependencies({
+            skipInstall: false,
+            skipMessage: true,
+            callback: function() {
+                process.stdout.write(cowsay);
+            }
+        });
+    });
 };
 
 util.inherits(BasicAppGenerator, yeoman.generators.Base);
@@ -68,8 +77,4 @@ BasicAppGenerator.prototype.bootstrapFiles = function bootstrapFiles() {
   this.bowerInstall(packages[this.format], {
     save: true
   });
-};
-
-BasicAppGenerator.prototype.end = function end() {
-  process.stdout.write(this.cowsay);
 };
