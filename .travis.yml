@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '0.10'
+  - '0.11'
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-test-easy' ]; then cd .. && eval "mv $currentfolder generator-test-easy" && cd generator-test-easy; fi
