@@ -5,14 +5,14 @@ var path    = require('path');
 var helpers = require('yeoman-generator').test;
 
 
-describe('basic-app generator', function () {
+describe('test-easy generator', function () {
     beforeEach(function (done) {
         helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
             if (err) {
                 return done(err);
             }
 
-            this.app = helpers.createGenerator('basic-app:app', [
+            this.app = helpers.createGenerator('test-easy:app', [
                 '../../app'
             ]);
             done();

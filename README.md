@@ -1,4 +1,4 @@
-# generator-basic-app [![Build Status](https://secure.travis-ci.org/lagden/generator-basic-app.png?branch=master)](https://travis-ci.org/lagden/generator-basic-app)
+# generator-test-easy [![Build Status](https://secure.travis-ci.org/lagden/generator-test-easy.png?branch=master)](https://travis-ci.org/lagden/generator-test-easy)
 
 A generator for [Yeoman](http://yeoman.io).
 
@@ -23,16 +23,16 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-basic-app from npm, run:
+To install generator-test-easy from npm, run:
 
 ```
-$ npm install -g generator-basic-app
+$ npm install -g generator-test-easy
 ```
 
 Finally, initiate the generator:
 
 ```
-$ yo basic-app
+$ yo test-easy
 ```
 
 ### Getting To Know Yeoman

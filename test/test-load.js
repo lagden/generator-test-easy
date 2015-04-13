@@ -3,7 +3,7 @@
 
 var assert = require('assert');
 
-describe('basic-app generator', function () {
+describe('test-easy generator', function () {
     it('can be imported without blowing up', function () {
         var app = require('../app');
         assert(app !== undefined);
